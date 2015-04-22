@@ -1,9 +1,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>tabula-extractor</groupId>
-    <artifactId>tabula-extractor</artifactId>
-    <version>0.7.4-SNAPSHOT</version>
+    <groupId>com.ravn.tabula-extractor</groupId>
+    <artifactId>tabula-extractor-0.7.4</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
     <name>tabula-extractor</name>
     <description>Extract tables from PDF files</description>
 
@@ -12,27 +12,34 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
 
-    <repositories>
+    <scm>
+        <connection>scm:git:https://github.com/RavnSystems/tabula-java.git</connection>
+        <developerConnection>scm:git:https://github.com/RavnSystems/tabula-java.git</developerConnection>
+        <url>https://github.com/RavnSystems/tabula-java.git</url>
+    </scm>
 
-        <repository>
-            <id>sonatype</id>
-            <name>Sonatype repository</name>
-            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-        </repository>
 
-        <repository>
-            <snapshots>
-                <enabled>true</enabled>
-                <updatePolicy>always</updatePolicy>
-                <checksumPolicy>warn</checksumPolicy>
-            </snapshots>
-            <id>apachesnapshots</id>
-            <name>apache snapshots</name>
-            <url>http://repository.apache.org/snapshots/</url>
-            <layout>default</layout>
-        </repository>
+    <!--<repositories>-->
 
-    </repositories>
+        <!--<repository>-->
+            <!--<id>sonatype</id>-->
+            <!--<name>Sonatype repository</name>-->
+            <!--<url>https://oss.sonatype.org/content/repositories/snapshots/</url>-->
+        <!--</repository>-->
+
+        <!--<repository>-->
+            <!--<snapshots>-->
+                <!--<enabled>true</enabled>-->
+                <!--<updatePolicy>always</updatePolicy>-->
+                <!--<checksumPolicy>warn</checksumPolicy>-->
+            <!--</snapshots>-->
+            <!--<id>apachesnapshots</id>-->
+            <!--<name>apache snapshots</name>-->
+            <!--<url>http://repository.apache.org/snapshots/</url>-->
+            <!--<layout>default</layout>-->
+        <!--</repository>-->
+
+    <!--</repositories>-->
 
     <build>
         <plugins>
@@ -88,9 +95,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>net.sf.jsi</groupId>
-            <artifactId>jsi</artifactId>
-            <version>1.1.0-SNAPSHOT</version>
+            <groupId>com.ravn.net.sf.jsi</groupId>
+            <artifactId>jsi-1.1.0</artifactId>
+            <version>1.0.0</version>
         </dependency>
 
         <dependency>
@@ -144,5 +151,18 @@
             <version>2.2.4</version>
         </dependency>
     </dependencies>
+
+    <distributionManagement>
+        <repository>
+            <id>mavn.ravn.co.uk</id>
+            <name>mavn.ravn.co.uk-releases</name>
+            <url>http://mavn.ravn.co.uk/artifactory/libs-releases-local</url>
+        </repository>
+        <snapshotRepository>
+            <id>mavn.ravn.co.uk</id>
+            <name>mavn.ravn.co.uk-snapshots</name>
+            <url>http://mavn.ravn.co.uk/artifactory/libs-snapshots-local</url>
+        </snapshotRepository>
+    </distributionManagement>
 
 </project>
