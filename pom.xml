@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.ravn.tabula-extractor</groupId>
     <artifactId>tabula-extractor-0.7.4</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0-SNAPSHOT</version>
     <name>tabula-extractor</name>
     <description>Extract tables from PDF files</description>
 
